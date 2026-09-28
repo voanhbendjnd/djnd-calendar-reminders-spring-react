@@ -18,30 +18,10 @@ services:
       - key: PORT
         value: 8080
 
-      - key: DB_HOST
+      - key: SPRING_DATASOURCE_URL
         fromDatabase:
           name: fap-timetable-db
-          property: host
-
-      - key: DB_PORT
-        fromDatabase:
-          name: fap-timetable-db
-          property: port
-
-      - key: DB_NAME
-        fromDatabase:
-          name: fap-timetable-db
-          property: database
-
-      - key: DB_USER
-        fromDatabase:
-          name: fap-timetable-db
-          property: user
-
-      - key: DB_PASSWORD
-        fromDatabase:
-          name: fap-timetable-db
-          property: password
+          property: jdbcConnectionString
 
       - key: JWT_SECRET
         generateValue: true
