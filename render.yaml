@@ -62,8 +62,6 @@ services:
     name: fap-timetable-frontend
     runtime: static
 
-    plan: free
-
     buildCommand: npm install && npm run build
     staticPublishPath: ./frontend/dist
     rootDir: ./frontend
